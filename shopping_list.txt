@@ -1,5 +1,5 @@
-1.Jabolki
-2.Cigari
-3.Rakija
-4.Krastavici
-5.Ocet
+1.Jabolki x 3
+2.Cigari x 15
+3.Rakija x 150
+4.Krastavici x 2
+5.Ocet x 3
