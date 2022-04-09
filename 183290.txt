@@ -1,0 +1,165 @@
+David Kocevski 
+
+1. git clone https://github.com/DachoSlav/SI_2022_lab1_183290.git kloniranje na repo
+2. cd SI_2022_lab1_183290
+3. git status status na promeni
+4. git add . dodavanje na promeni vo staging
+5. git commit -m “Add 5 items to the shopping list" komit na promeni
+6. git push - Output :	Writing objects: 100% (3/3), 358 bytes | 358.00 KiB/s, done.
+		     	Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+		     	To https://github.com/DachoSlav/SI_2022_lab1_183290.git
+   		       	7440d91..166202a  master -> master
+7. git status
+8. git add .
+9. git commit -m “Add quantities to the items."
+10. git push Output :	Writing objects: 100% (3/3), 365 bytes | 365.00 KiB/s, done.
+			Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+			To https://github.com/DachoSlav/SI_2022_lab1_183290.git
+ 			  166202a..312472b  master -> master
+
+11.git checkout -b branch1
+12.git checkout -b branch2
+13.git branch Output:   	branch1
+			* branch2
+ 			master
+
+14.git log
+Output:
+commit 312472b3ade57125973e38196c1da6b706974481 (HEAD -> branch2, origin/master, origin/HEAD, master, branch1)
+Author: DachoSlav <david.312kocevski@outlook.com>
+Date:   Sat Apr 9 17:52:17 2022 +0200
+
+    Add quantities to the items.
+
+commit 166202af2c63781669daba3e061bcc043c208d23
+Author: DachoSlav <david.312kocevski@outlook.com>
+Date:   Sat Apr 9 17:48:27 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 7440d91e55992d787ea0b656cfb9d0b51a2bb753
+Author: David Kocevski <64743897+DachoSlav@users.noreply.github.com>
+Date:   Sat Apr 9 17:39:31 2022 +0200
+
+    Update README.md
+
+commit 653fc49dea436ba6fedb9d3e07c0909b5cba9b80
+Author: David Kocevski <64743897+DachoSlav@users.noreply.github.com>
+Date:   Sat Apr 9 17:38:12 2022 +0200
+
+    Initial commit
+
+15.git checkout branch1 prefrluvanje na branch1
+16.git status
+17. git add .
+18. git commit -m “Change quantity of item #5"
+19.git checkout master
+20. git status
+21. git add .
+22.git commit -m "Change quantity of item #2"
+
+23. git merge branch1 Output:Auto-merging shopping_list.txt
+Merge made by the 'recursive' strategy.
+ shopping_list.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+24. git merge branch2 Output:Already up to date.
+
+25.git status Output:On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+26.git push Output: Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 881 bytes | 881.00 KiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/DachoSlav/SI_2022_lab1_183290.git
+   312472b..90fa227  master -> master
+
+27.git status
+28.git add .
+29.git commit -m "Modify item #4"
+30.git log
+Output:
+commit 544d2627cf6ef972e1def3e8a3007a5aea9c58da (HEAD -> branch2)
+Author: DachoSlav <david.312kocevski@outlook.com>
+Date:   Sat Apr 9 18:18:25 2022 +0200
+
+    Modify item #4
+
+commit 312472b3ade57125973e38196c1da6b706974481 (origin/branch1)
+Author: DachoSlav <david.312kocevski@outlook.com>
+Date:   Sat Apr 9 17:52:17 2022 +0200
+
+    Add quantities to the items.
+
+commit 166202af2c63781669daba3e061bcc043c208d23
+Author: DachoSlav <david.312kocevski@outlook.com>
+Date:   Sat Apr 9 17:48:27 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 7440d91e55992d787ea0b656cfb9d0b51a2bb753
+Author: David Kocevski <64743897+DachoSlav@users.noreply.github.com>
+Date:   Sat Apr 9 17:39:31 2022 +0200
+
+    Update README.md
+
+commit 653fc49dea436ba6fedb9d3e07c0909b5cba9b80
+Author: David Kocevski <64743897+DachoSlav@users.noreply.github.com>
+Date:   Sat Apr 9 17:38:12 2022 +0200
+
+    Initial commit
+
+31.git add .
+32. git commit --amend -m "Modify item #4 and add item #6"
+33.git log
+
+Output:
+commit 216bbff3c4e66090334a2f10c01187d2f9b6e9c9 (HEAD -> branch2)
+Author: DachoSlav <david.312kocevski@outlook.com>
+Date:   Sat Apr 9 18:18:25 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit 312472b3ade57125973e38196c1da6b706974481 (origin/branch1)
+Author: DachoSlav <david.312kocevski@outlook.com>
+Date:   Sat Apr 9 17:52:17 2022 +0200
+
+    Add quantities to the items.
+
+commit 166202af2c63781669daba3e061bcc043c208d23
+Author: DachoSlav <david.312kocevski@outlook.com>
+Date:   Sat Apr 9 17:48:27 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 7440d91e55992d787ea0b656cfb9d0b51a2bb753
+Author: David Kocevski <64743897+DachoSlav@users.noreply.github.com>
+Date:   Sat Apr 9 17:39:31 2022 +0200
+
+    Update README.md
+
+commit 653fc49dea436ba6fedb9d3e07c0909b5cba9b80
+Author: David Kocevski <64743897+DachoSlav@users.noreply.github.com>
+Date:   Sat Apr 9 17:38:12 2022 +0200
+
+    Initial commit
+
+34.git checkout master
+35.git merge branch1
+36.git merge branch2 
+Output:Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+- Nastana konflikt vo promenite pomegju master i branch2, ke go resime so toa sto ke gi prifatime promenite od branch2 i ke napravime commit so tie promeni
+
+37.git add .
+38.git commit -m "fixed merge conflict"
+39.git add .
+40.git commit -m "Add docs"
+
